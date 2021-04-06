@@ -63,22 +63,24 @@ if( $query->have_posts()) : while( $query->have_posts() ) : $query->the_post();
     <script>
     	jQuery(document).ready(function($) {
 
-    		var data = {
-    			action: 'gaia_add_to_cart',
-    			product: $('#gaia-new-order').attr('data-product');
-    		};
+    		$('#gaia-new-order').on('click', function() {
+	    		var data = {
+	    			action: 'gaia_add_to_cart',
+	    			product: $('#gaia-new-order').attr('data-product')
+	    		};
 
-			$.ajax({
-	          url: "/portal/wp-admin/admin-ajax.php", /** Denne skal ændres til korrekt URL senere **/
-	          type: "post",
-	          data: data,
-	          success: function(resp) {
-	            console.log(resp);
-	          },
-	          error: function(errorThrown) {
-	            console.log(errorThrown);
-	          }
-	        });
+				$.ajax({
+		          url: "/portal/wp-admin/admin-ajax.php", /** Denne skal ændres til korrekt URL senere **/
+		          type: "post",
+		          data: data,
+		          success: function(resp) {
+		            console.log(resp);
+		          },
+		          error: function(errorThrown) {
+		            console.log(errorThrown);
+		          }
+		        });
+			});
     	});
     </script>
     <?
