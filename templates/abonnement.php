@@ -53,13 +53,36 @@ if( $query->have_posts()) : while( $query->have_posts() ) : $query->the_post();
                         <?php the_post_thumbnail('medium'); ?>
                     </div>
                     <?php 
-if ( isset($_POST['new-order']) && $_POST['new-order'] === 'Submit' ) {
-    trigger_new_order( get_the_id(), $subscription );
-} else {
-    ?>
+						/*if ( isset($_POST['new-order']) && $_POST['new-order'] === 'Submit' ) {
+						    trigger_new_order( get_the_id(), $subscription );
+						} else {}*/
+    				?>
     <form class="new" method="post">
-        <input class="button alt" type="submit" id="button" name="new-order" value="Submit" >
+        <input class="button alt" data-product="<?php get_the_id(); ?>" type="submit" id="button gaia-new-order" name="new-order" value="Submit" >
     </form>
+    <script>
+    	jQuery(document).ready(function($) {
+
+    		$('#gaia-new-order').on('click', function() {
+	    		var data = {
+	    			action: 'gaia_add_to_cart',
+	    			product: $('#gaia-new-order').attr('data-product')
+	    		};
+
+				$.ajax({
+		          url: "/portal/wp-admin/admin-ajax.php", /** Denne skal ændres til korrekt URL senere **/
+		          type: "post",
+		          data: data,
+		          success: function(resp) {
+		            console.log(resp);
+		          },
+		          error: function(errorThrown) {
+		            console.log(errorThrown);
+		          }
+		        });
+			});
+    	});
+    </script>
     <?
 };
 endwhile;
