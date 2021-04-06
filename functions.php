@@ -64,3 +64,18 @@ function trigger_new_order( $from_product_id, $subscription ) {
     // Display a message with the order number
     echo '<p>' . sprintf( __("Vare tilføjet"), $subscription->get_id() ) . '</p>';
 }
+
+function gaia_add_to_cart() {
+
+    $product_id = $_POST['product'];
+
+    $product = wc_get_product( $product_id );
+    $subscription->add_product($product);
+    $subscription->calculate_totals();
+
+    echo wp_send_json(['Status' => 'Product has been added to the cart!']);
+    die;
+
+}
+add_action('wp_ajax_gaia_add_to_cart', 'gaia_add_to_cart');
+add_action('wp_ajax_nopriv_gaia_add_to_cart', 'gaia_add_to_cart');
