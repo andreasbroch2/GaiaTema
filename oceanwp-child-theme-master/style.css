@@ -1,0 +1,531 @@
+/*
+Theme Name: OceanWP Child
+Theme URI: https://oceanwp.org/
+Description: OceanWP WordPress theme example child theme.
+Author: Nick
+Author URI: https://oceanwp.org/
+Template: oceanwp
+Version: 1.0
+*/
+.text-center {
+    text-align: center;
+}
+/* Parent stylesheet should be loaded from functions.php not using @import */
+.woocommerce table.shop_table a.remove {
+    border: none;
+    font-size: 30px;
+    color: red;
+}
+#billing_country_field {
+    display: none;
+}
+
+.woocommerce-checkout form.checkout label {
+    color: #000000;
+}
+.woocommerce div.woocommerce-billing-fields p.form-row {
+    margin-bottom: 10px;
+}
+@media only screen and(min-width: 768px) {
+    #billing_postcode_field {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+        clear: none;
+    }
+}
+@media only screen and(min-width: 768px) {
+    #billing_city_field {
+        float: right;
+        width: 48%;
+        clear: none;
+    }
+}
+@media only screen and(min-width: 768px) {
+    #billing_phone_field {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+        clear: none;
+    }
+}
+@media only screen and(min-width: 768px) {
+    #billing_email_field {
+        float: right;
+        width: 48%;
+        clear: none;
+    }
+}
+@media only screen and(min-width: 768px) {
+    #billing_address_1_field {
+        float: left;
+        width: 48%;
+        margin-right: 4%;
+        clear: none;
+    }
+}
+@media only screen and(min-width: 768px) {
+    #billing_address_2_field {
+        float: right;
+        width: 48%;
+        clear: none;
+        margin-top: 32px;
+    }
+}
+
+/* The table containing the list of products and our custom elements */
+@media only screen and(min-width: 866px) {
+    .woocommerce-cart .woocommerce-cart-form {
+        float: left;
+        width: 68%;
+    }
+    .woocommerce-cart .cart-collaterals {
+        float: right;
+        width: 28%;
+    }
+}
+/* Some minor tweak to make sure the cart totals fill the space */
+.woocommerce-cart .cart-collaterals .cart_totals {
+    width: 100%;
+    padding: 0 20px 70px;
+}
+.woocommerce table.shop_table td {
+    padding: 10px 5px;
+}
+.woocommerce-cart .wc_coupon_message_wrap {
+    padding: 0 !important;
+}
+.woocommerce-cart .includes_tax {
+    display: none;
+}
+.woocommerce-checkout .includes_tax {
+    display: none;
+}
+.woocommerce .cart-collaterals h2 {
+    background-color: #063;
+    color: #fff;
+}
+.woocommerce-cart .wcsatt-options-cart {
+    margin: 10px;
+    text-align: center;
+}
+.woocommerce-cart td.product-price .subscription-details {
+    display: none;
+}
+@media only screen and(max-width: 767px) {
+    .woocommerce-page table.shop_table_responsive tbody .recurring-totals th {
+        display: table-cell;
+    }
+    .woocommerce-cart .woocommerce table.woocommerce-cart-form__contents {
+        margin-bottom: 100px;
+    }
+    .woocommerce-cart .woocommerce table.woocommerce-cart-form__contents tr td {
+        height: 80px;
+        text-align: left;
+        border: none;
+    }
+    .woocommerce-cart .woocommerce table.woocommerce-cart-form__contents .product-quantity {
+        float: right;
+    }
+    .woocommerce-cart .woocommerce table.woocommerce-cart-form__contents tr td .subscription-details {
+        display: none;
+    }
+    .woocommerce-cart .cart-collaterals .cart_totals table td {
+        width: 100%;
+    }
+    .woocommerce-cart .cart-collaterals .cart-totals table span.amount {
+        text-align: right;
+    }
+}
+.woocommerce-cart .woocommerce table.woocommerce-cart-form__contents tr td .quantity {
+    float: none;
+}
+.woocommerce-cart .woocommerce table.woocommerce-cart-form__contents tr td .qty {
+
+    font-size: 16px;
+    font-weight: 500;
+}
+.woocommerce-cart .woocommerce table.totalstable tr td:before {
+    content: attr(data-title) ": ";
+}
+.woocommerce .cart-collaterals p.woocommerce-shipping-destination {
+    display: none;
+}
+
+/* Kundeportal */
+.contain {
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.deadlinenotice {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10% 50% 40%;
+    grid-template-columns: 10% 50% 40%;
+    text-align: center;
+    font-family: Quicksand, sans-serif;
+    background-color: #ffedec;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-shadow: 2px 2px 10px 2px #e0e0e0;
+    box-shadow: 2px 2px 10px 2px #e0e0e0;
+}
+
+.deadlinenotice .tid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #810400;
+}
+
+.deadlinenotice div {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.notice {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10% 50% 40%;
+    grid-template-columns: 10% 50% 40%;
+    text-align: center;
+    font-family: Quicksand, sans-serif;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    -webkit-box-shadow: 2px 2px 10px 2px #e0e0e0;
+    box-shadow: 2px 2px 10px 2px #e0e0e0;
+}
+
+.notice div {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-column-align: center;
+    justify-self: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.notice div .button {
+    padding: 10px 20px;
+    margin: 5px;
+    color: #fff;
+}
+
+.kassekasse {
+    background-color: #fff;
+    -webkit-box-shadow: 2px 2px 10px 2px #e0e0e0;
+    box-shadow: 2px 2px 10px 2px #e0e0e0;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.kasse {
+    margin: 20px 0;
+}
+
+.kasse .levering {
+    margin-left: 5px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.kasse .leveringsdag {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.kasse .clickdiv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 60% 10%;
+    grid-template-columns: 30% 60% 10%;
+}
+
+.kasse .clickdiv div {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    -ms-grid-column-align: center;
+    justify-self: center;
+}
+
+.grid104545 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 10% 40% 40% 10%;
+    grid-template-columns: 10% 40% 40% 10%;
+}
+
+.grid104545 i,
+.grid104545 p {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+.grid104545 .fa-chevron-down {
+    -ms-grid-column-align: right;
+    justify-self: right;
+}
+
+.contentheading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#abomodal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+    overflow: scroll;
+    padding: 0;
+}
+
+#abomodal .removeprod {
+    background-color: #ff5252;
+    border-radius: 100px;
+}
+
+#abomodal .changemodal {
+    text-align: center;
+    background-color: #fff;
+    position: fixed;
+    top: 200px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    display: none;
+}
+
+#abomodal .changemodal .button {
+    margin-top: 10px;
+}
+
+#abomodal .button {
+    color: #fff;
+}
+
+#abomodal .edit-subscription {
+    display: none;
+}
+
+#abomodal #products {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: none;
+    position: fixed;
+    overflow: scroll;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 101;
+}
+
+#abomodal #products .productgrid .productadd {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+    grid-template-columns: 50% 50%;
+}
+
+#abomodal #products .productgrid input,
+#abomodal #products .productgrid textarea {
+    border: 1px solid #eeeeee;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 10px;
+}
+
+#abomodal #products .productgrid input[type="button"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+#abomodal #products .productgrid input::-webkit-outer-spin-button,
+#abomodal #products .productgrid input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#abomodal #products .productgrid .input-group {
+    clear: both;
+    margin: 15px 0;
+    position: relative;
+}
+
+#abomodal #products .productgrid .input-group input[type="button"] {
+    background-color: #eeeeee;
+    min-width: 38px;
+    width: auto;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+#abomodal #products .productgrid .input-group .button-minus,
+#abomodal #products .productgrid .input-group .button-plus {
+    font-weight: bold;
+    height: 38px;
+    padding: 0;
+    width: 38px;
+    position: relative;
+}
+
+#abomodal #products .productgrid .input-group .quantity-field {
+    position: relative;
+    height: 38px;
+    left: -6px;
+    text-align: center;
+    width: 62px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 0 0 5px;
+    resize: vertical;
+}
+
+#abomodal #products .productgrid .button-plus {
+    left: -13px;
+}
+
+#abomodal #products .productgrid input[type="number"] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+#abomodal #products .productgrid div {
+    -ms-grid-column-align: center;
+    justify-self: center;
+    text-align: center;
+}
+
+#abomodal #products .productgrid img {
+    width: 90%;
+    height: auto;
+}
+
+#abomodal .modalheader {
+    width: 100%;
+    height: 30px;
+    text-align: right;
+}
+
+#abomodal .collapsible {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px 10px 15px;
+    background-color: #fafafa;
+    -webkit-box-shadow: 2px 2px 10px 2px #e0e0e0;
+    box-shadow: 2px 2px 10px 2px #e0e0e0;
+}
+
+#abomodal .collapsible .contentheading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+#abomodal .collapsible #collapsiblecontent {
+    display: none;
+}
+
+#abomodal .collapsible #collapsiblecontent i {
+    float: right;
+}
+
+#abomodal .collapsible .product {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60% 10% 20% 10%;
+    grid-template-columns: 60% 10% 20% 10%;
+}
+
+#abomodal .abonnement {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 45% 45% 10%;
+    grid-template-columns: 45% 45% 10%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#abomodal .abonnement div {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+
+#abomodal .abonnement .statusboksaktiv {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #d0eebe;
+    border-color: #006633;
+    text-align: center;
+}
+
+#abomodal .abonnement .statusbokspause {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #edeebe;
+    border-color: #5f6600;
+    text-align: center;
+}
+
+#abomodal .abonnement .statusboksafmeldt {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #eebebe;
+    border-color: #660000;
+    text-align: center;
+}
+.infogrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 65% 10%;
+      grid-template-columns: 25% 65% 10%;
+}
+.infogrid i {
+  text-align: right;
+}
+.fullmodalhead {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 45% 45% 10%;
+    grid-template-columns: 45% 45% 10%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 10px;
+}
